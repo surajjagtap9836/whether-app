@@ -1,14 +1,18 @@
 import React from 'react'
-import Button from '@mui/material/Button';
+
+
+
+
 
 const Whether = () => {
-  return (
+  return (<>
     <div>
-       <Button variant="contained">Contained</Button>&nbsp;
-       <Button variant="outlined">Outlined</Button>
-
+      <h1>whether app</h1>
+      
+       
+      
     </div>
-  )
+    </> )
 }
 
 export default Whether
