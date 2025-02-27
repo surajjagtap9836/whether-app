@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 import './Whether.css'
 
-const Whether = () => {
+const Whether = ({zalki}) => {
   const [city,setcity]=useState("");
 
  const API_URL="https://api.openweathermap.org/data/2.5/weather";
@@ -26,21 +26,22 @@ const Whether = () => {
       des:jsonresponse.weather[0].description
     }
     console.log(newobj);
+    return newobj;
   }
 
 
   let ip=(event)=>{
     setcity(event.target.value);
   }
-  let formdata=(event)=>{
+  let formdata=async(event)=>{
     event.preventDefault();
     setcity("");
-    getdata();
+    let newinfo=await getdata();
+    zalki(newinfo);
   }
 
   return (<>
     <div className='searchbox'>
-      <h1 className='title'>Weather App</h1>
       <form onSubmit={formdata}>
       <TextField id="outlined-basic" label="City Name" variant="outlined" required value={city} onChange={ip}/><br/><br/>
       <Button variant="contained"type='submit' >

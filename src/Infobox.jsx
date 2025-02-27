@@ -2,42 +2,32 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-export default function Infobox(){
-
-     let object={
-        // city:"Pune",
-        name:"Pune",
-        des:"clear sky",
-        humidity:19,
-        maxtemp:306.33,
-        mintemp:306.33,
-        temp:306.33
-
-     }
+import './infobox.css'
+export default function Infobox({object}){
 
 
-const image ="https://images.unsplash.com/photo-1530530824905-661c2bb787f6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+const image ="https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D"
 
 
     return(
         <>
-        <h1>Infobox</h1>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }}className='card'>
       <CardMedia
         sx={{ height: 140 }}
         image={image}
         title="green iguana"
       />
-      <CardContent>
+      <CardContent >
         <Typography gutterBottom variant="h5" component="div">
         {/* City:{object.city} */}
-        City:{object.name}
+        City:<u><i>{object.name}</i></u>
        
         </Typography>
         <Typography variant="body2" component={"span"}>
             <p>Description:{object.des}</p>
-            <p>Humidity:{object.humidity}</p>
-            <p>temp:{object.temp}</p>
+            <p>Humidity:{object.humidity}&deg;C</p>
+            <p>temp:{object.temp}&deg;C</p>
         </Typography>
       </CardContent>
       

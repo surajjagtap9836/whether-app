@@ -1,15 +1,14 @@
-import Whether from './whether'
+
 import './App.css'
-import Infobox from './Infobox'
+import NewApp from './NewApp'
 
 function App() {
   
 
   return (
-    <>
-    <Whether/>
-    <Infobox/>
-    </>
+   
+    <NewApp/>
+  
   )
 }
 
