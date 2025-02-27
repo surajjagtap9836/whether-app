@@ -14,9 +14,11 @@ const Whether = () => {
   let getdata=async()=>{
     let response=await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`);
     let jsonresponse=await response.json();
-    //console.log(jsonresponse);
+    console.log(jsonresponse);
 
     let newobj= {
+      // city:city,
+      name:jsonresponse.name,
       temp:jsonresponse.main.temp,
       humidity:jsonresponse.main.humidity,
       mintemp:jsonresponse.main.temp_min,

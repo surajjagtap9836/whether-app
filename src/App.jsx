@@ -1,5 +1,6 @@
 import Whether from './whether'
 import './App.css'
+import Infobox from './Infobox'
 
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
     <Whether/>
+    <Infobox/>
     </>
   )
 }
