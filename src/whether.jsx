@@ -12,7 +12,7 @@ const Whether = ({zalki}) => {
   
 
   let getdata=async()=>{
-    let response=await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`);
+    let response=await fetch(`${API_URL}?q=${city}&units=metric&appid=${API_KEY}`);
     let jsonresponse=await response.json();
     console.log(jsonresponse);
 
